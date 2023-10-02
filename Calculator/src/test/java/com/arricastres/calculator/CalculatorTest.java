@@ -1,12 +1,19 @@
 package com.arricastres.calculator;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-    private Calculator Calculatorentest=new Calculator();
+
+    private Calculator Calculatorentest;
+    @BeforeEach
+    public void initEach(){
+        Calculatorentest=new Calculator();
+    }
+
 
     @Test
     void add_doit_renvoyer_la_somme_de_opG_et_opD(){
